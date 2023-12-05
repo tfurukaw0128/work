@@ -18,14 +18,6 @@ provider "ciscoise" {
   single_request_timeout = 60
 }
 
-provider "ciscoise" {
-  username = data.terraform_remote_state.credentials
-  password = var.ciscoise_password
-  base_url = var.ciscoise_base_url
-  ssl_verify = "false"
-  single_request_timeout = 150
-}
-
 resource "ciscoise_network_device" "example" {
   provider = ciscoise
   parameters {
