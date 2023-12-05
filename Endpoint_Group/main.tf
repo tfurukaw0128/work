@@ -14,7 +14,7 @@ provider "ciscoise" {
   ssl_verify = "false"
   use_api_gateway = "false"
   use_csrf_token = "false"
-  single_request_timeout = 60
+  single_request_timeout = 150
 }
 
 resource "ciscoise_endpoint_group" "example" {
