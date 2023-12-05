@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    ciscoise = {
-      source = "CiscoISE/ciscoise"
-      version = "0.6.22-beta"
-    }
-  }
-}
-
 data "terraform_remote_state" "status" {
   backend = "remote"
 
@@ -16,14 +7,6 @@ data "terraform_remote_state" "status" {
       name = "policy_create"
     }
   }
-}
-
-provider "ciscoise" {
-  username = data.terraform_remote_state.status.outputs.ciscoise_username
-  password = data.terraform_remote_state.status.outputs.ciscoise_password
-  base_url = data.terraform_remote_state.status.outputs.ciscoise_base_url
-  ssl_verify = "false"
-  single_request_timeout = 150
 }
 
 resource "ciscoise_network_access_authorization_rules" "example" {
