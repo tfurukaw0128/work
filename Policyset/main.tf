@@ -4,7 +4,7 @@ resource "ciscoise_network_access_policy_set" "example" {
     default      = "false"
     description  = "test policy set"
     hit_counts   = 0
-    name         = "test-policyset"
+    name         = "Wired MAB"
     rank         = 0
     service_name = "Default Network Access"
     state        = "enabled"

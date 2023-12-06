@@ -30,7 +30,7 @@ resource "ciscoise_network_access_authentication_rules" "example" {
       }
       default    = "false"
       hit_counts = 0
-      name       = "MAB Endpoints"
+      name       = "MAB"
       rank       = 0
       state      = "enabled"
     }
