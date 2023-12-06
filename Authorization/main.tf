@@ -4,7 +4,7 @@ data "terraform_remote_state" "status" {
   config = {
     organization = "Terraform-Cloud-ISE"
     workspaces = {
-      name = "policy_create"
+      name = "policyset_create"
     }
   }
 }
